@@ -52,7 +52,7 @@ pnpm build
 
 ## Deploy ke Vercel
 
-Repositori ini telah disiapkan untuk Vercel melalui `vercel.json`. Konfigurasi tersebut membangun aset React ke `dist/public`, menyajikan deep link halaman SPA seperti `/w/:slug`, dan menjalankan `api/trpc/[...trpc].ts` sebagai Vercel Function untuk seluruh API tRPC. Dengan demikian, folder `dist` yang juga berisi berkas server lokal tidak lagi disajikan sebagai halaman web.
+Repositori ini telah disiapkan untuk Vercel melalui `vercel.json`. Konfigurasi tersebut membangun aset React ke `dist/public`, membundel sumber fungsi `server/vercel-trpc.ts` menjadi `api/trpc/[...trpc].js`, menyajikan deep link halaman SPA seperti `/w/:slug`, dan menjalankan fungsi tersebut untuk seluruh API tRPC. Dengan demikian, folder `dist` yang juga berisi berkas server lokal tidak lagi disajikan sebagai halaman web.
 
 Pada halaman impor proyek Vercel, gunakan root repository (kosong atau `./`). Nilai `vercel.json` akan menetapkan perintah instalasi, build, dan output secara otomatis.
 

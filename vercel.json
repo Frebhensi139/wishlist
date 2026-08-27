@@ -5,7 +5,7 @@
   "buildCommand": "pnpm run build:vercel",
   "outputDirectory": "dist/public",
   "functions": {
-    "api/trpc/[...trpc].ts": {
+    "api/trpc/[...trpc].js": {
       "maxDuration": 10
     }
   },

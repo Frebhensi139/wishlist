@@ -26,3 +26,4 @@
 - [x] Memperbaiki jalur prosedur tRPC pada pengujian HTTP handler Vercel.
 - [ ] Memverifikasi deployment produksi Vercel setelah perubahan didorong ke GitHub.
 - [x] Memprioritaskan rute API Vercel sebelum fallback SPA agar endpoint tRPC tidak mengembalikan HTML.
+- [ ] Mendiagnosis dan memperbaiki kegagalan runtime fungsi tRPC pada Vercel.
