@@ -27,3 +27,4 @@
 - [ ] Memverifikasi deployment produksi Vercel setelah perubahan didorong ke GitHub.
 - [x] Memprioritaskan rute API Vercel sebelum fallback SPA agar endpoint tRPC tidak mengembalikan HTML.
 - [ ] Mendiagnosis dan memperbaiki kegagalan runtime fungsi tRPC pada Vercel.
+- [ ] Memastikan aset statis tetap dilayani Vercel sebelum fallback deep link SPA diterapkan.
