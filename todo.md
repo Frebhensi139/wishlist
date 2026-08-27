@@ -16,4 +16,4 @@
 - [x] Menampilkan isi catatan penerima di ruang pengelolaan pemilik.
 - [x] Memverifikasi tampilan mobile halaman wishlist bersama setelah data selesai dimuat.
 - [x] Memverifikasi tampilan mobile ruang pengelolaan pemilik, termasuk formulir dan kartu catatan.
-- [ ] Mendorong versi final proyek ke repositori GitHub Frebhensi139/wishlist.
+- [x] Mendorong versi final proyek ke repositori GitHub Frebhensi139/wishlist.
