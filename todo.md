@@ -17,3 +17,11 @@
 - [x] Memverifikasi tampilan mobile halaman wishlist bersama setelah data selesai dimuat.
 - [x] Memverifikasi tampilan mobile ruang pengelolaan pemilik, termasuk formulir dan kartu catatan.
 - [x] Mendorong versi final proyek ke repositori GitHub Frebhensi139/wishlist.
+- [x] Menyesuaikan konfigurasi proyek untuk deployment full-stack Vercel.
+- [x] Menambahkan dokumentasi environment dan langkah redeploy Vercel.
+- [x] Memverifikasi build dan API setelah adaptasi Vercel.
+- [ ] Mendorong perbaikan konfigurasi deployment ke repositori GitHub.
+- [x] Menambahkan pengujian HTTP untuk handler tRPC serverless Vercel.
+- [x] Memperbaiki normalisasi jalur pada handler tRPC serverless agar menerima rute Vercel.
+- [x] Memperbaiki jalur prosedur tRPC pada pengujian HTTP handler Vercel.
+- [ ] Memverifikasi deployment produksi Vercel setelah perubahan didorong ke GitHub.

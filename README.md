@@ -50,6 +50,23 @@ pnpm test
 pnpm build
 ```
 
+## Deploy ke Vercel
+
+Repositori ini telah disiapkan untuk Vercel melalui `vercel.json`. Konfigurasi tersebut membangun aset React ke `dist/public`, menyajikan deep link halaman SPA seperti `/w/:slug`, dan menjalankan `api/trpc/[...trpc].ts` sebagai Vercel Function untuk seluruh API tRPC. Dengan demikian, folder `dist` yang juga berisi berkas server lokal tidak lagi disajikan sebagai halaman web.
+
+Pada halaman impor proyek Vercel, gunakan root repository (kosong atau `./`). Nilai `vercel.json` akan menetapkan perintah instalasi, build, dan output secara otomatis.
+
+| Pengaturan Vercel | Nilai |
+|---|---|
+| Root Directory | Kosong atau `./` |
+| Install Command | `pnpm install --frozen-lockfile` |
+| Build Command | `pnpm run build:vercel` |
+| Output Directory | `dist/public` |
+
+Sebelum redeploy, tambahkan variabel `DATABASE_URL` di **Project Settings → Environment Variables** untuk lingkungan Production, Preview, dan Development sesuai kebutuhan. Nilainya harus berupa connection string MySQL/TiDB yang dapat dijangkau dari Vercel, misalnya `mysql://USER:PASSWORD@HOST:3306/wishlist_bersama`. Kemudian jalankan migrasi `drizzle/0001_careful_purifiers.sql` pada database tersebut satu kali. Tanpa database eksternal ini, antarmuka akan dapat dimuat tetapi wishlist tidak dapat disimpan.
+
+Setelah perubahan ini tersedia di cabang `main`, Vercel akan memulai deployment baru secara otomatis. Untuk melakukan deployment ulang secara manual, pilih deployment terbaru kemudian klik **Redeploy** di dashboard Vercel.
+
 ## Alur Penggunaan
 
 Pada beranda, isi nama wishlist kemudian pilih **“Buat & dapatkan tautan”**. Aplikasi akan membawa pembuat ke URL pengelolaan pribadi berbentuk `/manage/:slug?key=:ownerToken`. Simpan URL ini; tanpa akun, aplikasi tidak memiliki cara untuk memulihkan akses pengelolaan apabila URL hilang.
